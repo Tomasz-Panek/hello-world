@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+html {
+    scroll-behavior: smooth;
+}
+/* menu */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    background: #2626263d;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+header nav {
+    float: right;
+}
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 40px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+}
+header nav ul li a:hover {
+    color: #fff;
+    background: #2196f3;
+}
+.menu__toggle {
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+/* hero */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url("images/img3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.hero__description {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(240, 240, 240);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.hero__descriptionParagraph {
+    color: rgb(172,172,172);
+    padding-top: 20px;
+    font-size: 1rem;
+    font-style: italic;
+}
+.hero__social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fab {
+    color: rgba(0, 195, 255, 0.664);
+    font-size: 1.5rem;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+/* O mnie */
+.aboutMe {
+    width: 100%;
+    height: auto;
+    background-color: rgba(62, 127, 165);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutMe__image {
+    background: url("images/tomasz_panek.jpg");
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1rem solid rgba(62, 127, 165);
+    margin-top: -100px;
+} 
+.aboutMe_header {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: .5rem
+} 
+.aboutMe__paragraph {
+    padding: 100px 300px;
+    color: #b8b8b8;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: .1rem;
+}
+.aboutMe__paragraph span {
+    color: #dbc751;
+}
+/* Zaintresowania */
+.card__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 170px;
+}
+.card__content {
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 300px;
+    background: #ffffff;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.08);
+    background:  rgba(7, 92, 144, 0.075);
+    border-radius: 6px;
+}
+.card .imgBx,
+.card .details {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    transition: .5s;
+}
+.card .imgBx img {
+    width: 128px;
+    height: 128px;
+}
+.card .imgBx {
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover .imgBx {
+    top: 0;
+    left: -100%;
+}
+.card .details {
+    background: rgb(237,85,59);
+    top: 0;
+    left: 100%;
+    padding: 40px 30px;
+}
+.card:hover .details {
+    top: 0;
+    left: 0;
+}
+.card .details h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10px;
+    border-bottom: 2px solid #fff;
+}
+.card .details p {
+    margin: 20px 0 0;
+    color: #fff;
+}
+/* Projekty */
+.timeline {
+    width: 70%;
+    height: auto;
+    margin: 200px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.timeline li {
+    position: relative;
+    list-style: none;
+}
+.timeline li .item {
+    position: relative;
+    min-height: 60px;
+    background: rgba(7, 92, 144, 0.075); 
+    padding: 0 20px 20px 30px;
+    margin-left: 20px;
+    border-left: 1px solid
+}
+.timeline li:last-child .item {
+    border-left: 1px solid transparent;
+}
+.timeline li .item span {
+    position: absolute;
+    top: -8px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #dfbf0a;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%; 
+}
+.timeline li:hover .item span{
+    background: #ce4242;
+}
+.timeline li .item h3,
+.timeline li .item p {
+    margin: 0;
+    padding: 0;
+}
+/* Umiejetnosci */
+.skills {
+    margin-top: 170px;
+    display: flex;
+    justify-content: space-around;
+}
+.card__skills {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(7, 92, 144, 0.075);
+    overflow: hidden;
+}
+.card__skillsInput,
+.card__skillsToogle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    outline: none;
+    z-index: 10; 
+    cursor: pointer;
+}
+.card__skillsInput {
+    opacity: 0;
+}
+.card__skillsToogle {
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgba(7, 89, 182, 0.486);
+    transition: .5s;
+    text-align: center;
+    line-height: 50px;
+    font-size: 36px;
+    box-shadow: 0 0 0 0px #5df1ea8c;
+}
+.card__skillsInput:checked ~ .card__skillsToogle {
+    box-shadow: 0 0 0 500px #5df1ea;
+    transform: rotate(90deg);
+}
+.image__box,
+.content {
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 128px);
+    width: 100%;
+    height: 100%;
+}
+.content {
+    padding: 25px;
+    box-sizing: border-box;
+    z-index: 11;
+    pointer-events: none;
+    transition: .5s;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 30px;
+    color: rgb(83, 83, 83);
+}
+.card__skillsInput:checked ~ .content {
+    opacity: 1;
+    transition-delay: .5s;
+}
+/* Stopka */
+.footer__top {
+    width: 100%;
+    padding: 13px 0;
+    margin-top: 170px;
+    background-color: #336666;
+    color: #cccc66;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer__top span {
+    font-weight: 900;
+}
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #333366;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.footer__menu {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__menu img {
+    width: 80%;
+}
+.footer__address {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer__adressName li {
+    list-style-type: none;
+    padding: 2% 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.footer__adressName li:nth-child(3) {
+    margin-top: 15px;
+}
+.line {
+    width: 1px;
+    height: 100px;
+    background-color: rgba(182, 182, 182, .3);
+}
+.footer__form {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer__form span {
+    color: #fff;
+    padding: 20px;
+}
+.sidebar__contact {
+    width: 80%;
+    height: auto;
+}
+.sidebar__contact input,
+.sidebar__contact textarea
+ {
+    width: 100%;
+    height: 36px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.5);
+    outline: none;
+}
+.sidebar__contact textarea {
+    height: 60px;
+    resize: none;
+}
+.sidebar__contact input[type='submit']{
+    background: #00bcd4;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-style: 18px; 
+}
+.scroll__top {
+    width: 50px;
+    height: 50px;
+    background: rgb(236, 138, 46);
+    position: fixed;
+    bottom: 10%;
+    right: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+    opacity: .5;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 1079px){
+    header {
+        padding: 0 20px;
+    }
+    .menu__toggle {
+        display: block;
+    }
+    header nav {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 50px;
+        left: -100%;
+        transition: .5s;
+    }
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+    .active {
+        left: 0;
+    }
+    .hero__description {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    .hero__descriptionParagraph {
+        font-size: .8rem;
+    }
+    .aboutMe__image {
+        background: url("images/tomasz_panek_170_170.jpg");
+        width: 170px;
+        height: 170px;
+        margin-top: -60px;
+    } 
+    .aboutMe__paragraph {
+        padding: 50px 50px;
+    }
+    .aboutMe_header {
+        font-size: 1rem;
+    } 
+    .aboutMe__paragraph {
+        font-size: .8rem;
+    }
+    .card__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .skills {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .card__content {
+        margin-bottom: 50px;
+    }
+    .card__skills {
+        margin-bottom: 50px;
+    }
+    .footer__top {
+        font-size: .78rem;
+    }
+    .footer__top span {
+        font-weight: 700;
+        font-size: .78rem;
+    }
+    .footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer__form {
+        width: 350px;
+    }
+    .footer__address {
+        width: 350px;
+    }
+    .footer__menu {
+        width: 350px;
+    }
+    .line {
+        width: 100px;
+        height: 1px;
+        margin: 30px 0;
+    }
+}
